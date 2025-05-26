@@ -32,7 +32,7 @@ const Pacientes = () => {
     <div>
       <Typography variant="h4" gutterBottom>Pacientes</Typography>
       <div style={{ marginBottom: 20 }}>
-        <TextField label="Nome" value={nome} onChange={(e) => setNome(e.target.value)} />
+        <TextField label="Nome do Paciente" value={nome} onChange={(e) => setNome(e.target.value)} />
         <Button onClick={salvar} variant="contained" style={{ marginLeft: 10 }}>Salvar</Button>
       </div>
       <TableContainer component={Paper}>
