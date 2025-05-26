@@ -39,7 +39,7 @@ const Concierge = () => {
         <Table>
           <TableHead>
             <TableRow>
-              <TableCell>Tarefa</TableCell>
+              <TableCell>Descrição</TableCell>
               <TableCell>Ações</TableCell>
             </TableRow>
           </TableHead>
