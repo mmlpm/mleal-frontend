@@ -30,7 +30,7 @@ const Financeiro = () => {
         {cards.map((card) => (
           <Grid item xs={12} sm={6} md={3} key={card.label}>
             <Paper elevation={3} sx={{ padding: 2 }}>
-              <Typography variant="h5">{card.value}</Typography>
+              <Typography variant="h5">{card.value || '-'}</Typography>
               <Typography color="text.secondary">{card.label}</Typography>
             </Paper>
           </Grid>
