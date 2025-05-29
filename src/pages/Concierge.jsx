@@ -1,12 +1,23 @@
-import React from "react";
+import React from 'react';
+import Sidebar from '../components/Sidebar';
 
 function Concierge() {
   return (
-    <div className="p-6">
-      <h1 className="text-2xl font-bold mb-4">Área do Concierge</h1>
-      <p className="text-gray-700">
-        Em breve: painel para controle de agenda, fluxo dos pacientes e integração com planos.
-      </p>
+    <div className="flex h-screen">
+      <Sidebar />
+      <div className="flex-1 p-10 overflow-y-auto">
+        <h1 className="text-3xl font-bold mb-6">Concierge</h1>
+        <p className="text-lg">
+          Esta é a área do concierge responsável por acompanhar os pacientes e garantir que os exames e consultas
+          necessárias sejam marcados para o acompanhamento completo dos planos de tratamento.
+        </p>
+        <div className="mt-6">
+          <p className="text-sm text-gray-600">
+            (Funcionalidades específicas em desenvolvimento: integração com agenda, alertas de exames, notificações de
+            retorno etc.)
+          </p>
+        </div>
+      </div>
     </div>
   );
 }
