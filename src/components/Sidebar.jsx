@@ -1,34 +1,35 @@
-import React from "react";
-import { Link, useLocation } from "react-router-dom";
+import React from 'react';
+import { Link, useLocation } from 'react-router-dom';
 
-const Sidebar = () => {
+function Sidebar() {
   const location = useLocation();
-  const linkClasses = (path) =>
-    `block px-4 py-2 rounded ${
-      location.pathname === path
-        ? "bg-blue-700 text-white"
-        : "text-blue-100 hover:bg-blue-600"
-    }`;
+
+  const menuItems = [
+    { label: 'Painel', path: '/painel' },
+    { label: 'Pacientes', path: '/pacientes' },
+    { label: 'Planos', path: '/planos' },
+    { label: 'Concierge', path: '/concierge' },
+    { label: 'Configurações', path: '/configuracoes' },
+  ];
 
   return (
-    <div className="w-64 h-screen bg-blue-900 text-white flex flex-col">
-      <div className="p-4 text-xl font-bold border-b border-blue-700">ML eal</div>
-      <nav className="flex-1 p-4 space-y-2">
-        <Link to="/" className={linkClasses("/")}>
-          Dashboard
-        </Link>
-        <Link to="/pacientes" className={linkClasses("/pacientes")}>
-          Pacientes
-        </Link>
-        <Link to="/planos" className={linkClasses("/planos")}>
-          Planos de Tratamento
-        </Link>
-        <Link to="/concierge" className={linkClasses("/concierge")}>
-          Concierge
-        </Link>
+    <div className="w-64 h-full bg-blue-900 text-white flex flex-col p-6">
+      <h2 className="text-2xl font-bold mb-8">MLeal</h2>
+      <nav className="flex flex-col space-y-4">
+        {menuItems.map((item) => (
+          <Link
+            key={item.path}
+            to={item.path}
+            className={`text-lg ${
+              location.pathname === item.path ? 'font-bold underline' : ''
+            }`}
+          >
+            {item.label}
+          </Link>
+        ))}
       </nav>
     </div>
   );
-};
+}
 
 export default Sidebar;
