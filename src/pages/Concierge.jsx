@@ -1,17 +1,14 @@
 import React from "react";
 
-const Concierge = () => {
+function Concierge() {
   return (
     <div className="p-6">
-      <h1 className="text-2xl font-semibold text-gray-800 mb-4">Concierge</h1>
-      <div className="bg-white shadow rounded-lg p-4">
-        <p className="text-gray-700">
-          Área destinada ao gerenciamento de agendas, lembretes e coordenação
-          do ciclo de acompanhamento dos pacientes.
-        </p>
-      </div>
+      <h1 className="text-2xl font-bold mb-4">Área do Concierge</h1>
+      <p className="text-gray-700">
+        Em breve: painel para controle de agenda, fluxo dos pacientes e integração com planos.
+      </p>
     </div>
   );
-};
+}
 
 export default Concierge;
