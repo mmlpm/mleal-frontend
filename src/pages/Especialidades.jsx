@@ -6,12 +6,12 @@ function Especialidades() {
     <div className="flex h-screen">
       <Sidebar />
       <div className="flex-1 p-10 overflow-y-auto">
-        <h1 className="text-3xl font-bold mb-6">Especialidades</h1>
+        <h1 className="text-3xl font-bold mb-6">Especialidades Médicas</h1>
         <p className="text-lg">
-          Esta seção exibe as especialidades médicas complementares oferecidas na clínica e o vínculo com os planos de acompanhamento.
+          Gerencie aqui as especialidades médicas integradas à clínica para acompanhamento complementar de pacientes.
         </p>
         <div className="mt-6 text-sm text-gray-600">
-          (Funcionalidades futuras: cadastro de especialidades, edição, vínculo com doenças oftalmológicas e alertas de recomendação.)
+          (Funcionalidades futuras: cadastro de especialidades, vinculação com doenças oftalmológicas, integração com o concierge.)
         </div>
       </div>
     </div>
