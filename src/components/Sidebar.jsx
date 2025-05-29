@@ -1,34 +1,33 @@
-import React from 'react';
-import { Drawer, List, ListItem, ListItemButton, ListItemText, Toolbar } from '@mui/material';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link, useLocation } from "react-router-dom";
 
 const Sidebar = () => {
-  const menuItems = [
-    { text: 'Dashboard', path: '/' },
-    { text: 'Pacientes', path: '/pacientes' },
-    { text: 'Planos', path: '/planos' },
-    { text: 'Concierge', path: '/concierge' },
-    { text: 'Agenda', path: '/agenda' },
-    { text: 'Financeiro', path: '/financeiro' },
-  ];
+  const location = useLocation();
+  const linkClasses = (path) =>
+    `block px-4 py-2 rounded ${
+      location.pathname === path
+        ? "bg-blue-700 text-white"
+        : "text-blue-100 hover:bg-blue-600"
+    }`;
 
   return (
-    <Drawer variant="permanent" sx={{
-      width: 240,
-      flexShrink: 0,
-      [`& .MuiDrawer-paper`]: { width: 240, boxSizing: 'border-box' },
-    }}>
-      <Toolbar />
-      <List>
-        {menuItems.map(item => (
-          <ListItem key={item.text} disablePadding>
-            <ListItemButton component={Link} to={item.path}>
-              <ListItemText primary={item.text} />
-            </ListItemButton>
-          </ListItem>
-        ))}
-      </List>
-    </Drawer>
+    <div className="w-64 h-screen bg-blue-900 text-white flex flex-col">
+      <div className="p-4 text-xl font-bold border-b border-blue-700">ML eal</div>
+      <nav className="flex-1 p-4 space-y-2">
+        <Link to="/" className={linkClasses("/")}>
+          Dashboard
+        </Link>
+        <Link to="/pacientes" className={linkClasses("/pacientes")}>
+          Pacientes
+        </Link>
+        <Link to="/planos" className={linkClasses("/planos")}>
+          Planos de Tratamento
+        </Link>
+        <Link to="/concierge" className={linkClasses("/concierge")}>
+          Concierge
+        </Link>
+      </nav>
+    </div>
   );
 };
 
