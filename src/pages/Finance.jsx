@@ -1,14 +1,17 @@
 import React from "react";
 
-function Financeiro() {
+const Finance = () => {
   return (
     <div className="p-6">
-      <h1 className="text-2xl font-bold mb-4">Financeiro</h1>
-      <p className="text-gray-700">
-        Em breve: controle de fluxo de caixa, faturamento e despesas.
-      </p>
+      <h1 className="text-2xl font-semibold text-gray-800 mb-4">Financeiro</h1>
+      <div className="bg-white shadow rounded-lg p-4">
+        <p className="text-gray-700">
+          Aqui será possível acompanhar indicadores de faturamento, repasse e
+          inadimplência. Os dados virão automaticamente do sistema.
+        </p>
+      </div>
     </div>
   );
-}
+};
 
-export default Financeiro;
+export default Finance;
